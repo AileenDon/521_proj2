@@ -1,4 +1,4 @@
-# README for Part 1: Enhanced Scanner
+# Part 1: Enhanced Scanner
 
 ## Overview
 The scanner is implemented in C and is responsible for lexical analysis, converting sequences of characters into a series of tokens.
