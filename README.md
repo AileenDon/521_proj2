@@ -3,9 +3,7 @@
 **Project 2: Table-Driven LL(1) Parser for Calculator Language with Comments**
 
 **Team Members:**
-- John Smith (Contributions: Scanner implementation, Error handling)
-- Emily Johnson (Contributions: Parser implementation, Testing)
-- Michael Williams (Contributions: Debugging, Documentation)
+-----Neeed to be added-----
 
 ---
 
@@ -96,6 +94,9 @@ write perimeter
 ```
 
 ---
+**Output Screenshots**
+<img width="327" alt="image" src="https://github.com/AileenDon/521_proj2/assets/158865231/dfe2dff7-978f-407f-946b-22bbe7979ecc">
+<img width="267" alt="image" src="https://github.com/AileenDon/521_proj2/assets/158865231/01e13349-2ada-4568-8e64-c7531221cfa5">
 
 **Error Handling:**
 
