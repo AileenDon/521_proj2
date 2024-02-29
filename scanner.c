@@ -3,6 +3,9 @@
 #include <string.h>
 #include <stdlib.h>
 
+// Add a global variable for the current line number
+int current_line = 1;
+
 typedef enum {
     read, write, id, literal, becomes,
     add, sub, mul, div_op, lparen, rparen, eof,semicolon
@@ -23,6 +26,9 @@ token scan() {
 
     //Skip white space 
     while (isspace(c)) {
+        if (c == '\n') {
+            current_line++;
+        }
         c = getchar();
     }
 
@@ -103,10 +109,10 @@ token scan() {
     }
 }
 
-int main() {
-    token t;
-    while ((t = scan()) != eof) {
-        printf("Token: %s, Image: [%s]\n", token_names[t], token_image);
-    }
-    return 0;
-}
+// int main() {
+//     token t;
+//     while ((t = scan()) != eof) {
+//         printf("Token: %s, Image: [%s]\n", token_names[t], token_image);
+//     }
+//     return 0;
+// }
