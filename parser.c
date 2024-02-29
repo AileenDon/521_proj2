@@ -10,13 +10,14 @@ void statement();
 void expr();
 void term();
 void factor();
+extern int current_line;
 
 void next_token() {
     current_token = scan();
 }
 
 void syntax_error(char *msg) {
-    fprintf(stderr, "Syntax error: %s\n", msg);
+    fprintf(stderr, "Syntax error on line %d: %s\n", current_line, msg);
     exit(1);
 }
 
