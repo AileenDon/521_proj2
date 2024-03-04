@@ -45,9 +45,10 @@ token scan() {
                 c = getchar();
                 if (c == '/' && prev == '*') break;
                 if (c == EOF) {
-                    fprintf(stderr, "Error: unterminated comment.\n");
+                    fprintf(stderr, "Lexical error on line %d: unterminated comment.\n", current_line);
                     exit(1);
                 }
+
             } while (1);
             // Move past comment
             c = getchar(); 
