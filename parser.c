@@ -73,12 +73,17 @@ void factor() {
         case lparen:
             next_token();
             expr();
-            match(rparen);
+            if (current_token != rparen) {
+                syntax_error("Missing closing parenthesis");
+            } else {
+                next_token(); 
+            }
             break;
         default:
             syntax_error("Invalid factor");
     }
 }
+
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
