@@ -38,31 +38,31 @@ token scan() {
     // Handle comments or division operator
     if (c == '/') {
         c = getchar();
-if (c == '*') { 
-    int prev = 0;
-    do {
-        prev = c;
-        c = getchar();
-        if (c == '\n') {
-            current_line++; 
-        }
-        if (c == '/' && prev == '*') break;
-        if (c == EOF) {
-            fprintf(stderr, "Lexical error on line %d: unterminated comment.\n", current_line);
-            exit(1);
-        }
-    } while (1);
-    c = getchar(); 
-    return scan(); 
-}else if (c == '/') { 
-            while (c != '\n' && c != EOF) c = getchar();
-            return scan(); 
+    if (c == '*') { 
+        int prev = 0;
+        do {
+            prev = c;
+            c = getchar();
+            if (c == '\n') {
+                current_line++; 
+            }
+            if (c == '/' && prev == '*') break;
+            if (c == EOF) {
+                fprintf(stderr, "Lexical error on line %d: unterminated comment.\n", current_line);
+                exit(1);
+            }
+        } while (1);
+        c = getchar(); 
+        return scan(); 
+    }else if (c == '/') { 
+                while (c != '\n' && c != EOF) c = getchar();
+                return scan(); 
 
-            // Division operator
-        } else { 
-            return div_op;
+                // Division operator
+            } else { 
+                return div_op;
+            }
         }
-    }
 
     // Handle numbers
     if (isdigit(c)) {
