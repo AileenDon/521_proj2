@@ -28,8 +28,8 @@ token scan() {
     while (isspace(c)) {
         if (c == '\n') {
             current_line++;
-            c = getchar();
         }     
+        c = getchar();
     }
 
     // Handle end of file
@@ -38,24 +38,23 @@ token scan() {
     // Handle comments or division operator
     if (c == '/') {
         c = getchar();
-        if (c == '*') { 
-            int prev = 0;
-            do {
-                prev = c;
-                c = getchar();
-                if (c == '/' && prev == '*') break;
-                if (c == EOF) {
-                    fprintf(stderr, "Lexical error on line %d: unterminated comment.\n", current_line);
-                    exit(1);
-                }
-
-            } while (1);
-            // Move past comment
-            c = getchar(); 
-            return scan(); 
-
-            // Line comment
-        } else if (c == '/') { 
+if (c == '*') { 
+    int prev = 0;
+    do {
+        prev = c;
+        c = getchar();
+        if (c == '\n') {
+            current_line++; 
+        }
+        if (c == '/' && prev == '*') break;
+        if (c == EOF) {
+            fprintf(stderr, "Lexical error on line %d: unterminated comment.\n", current_line);
+            exit(1);
+        }
+    } while (1);
+    c = getchar(); 
+    return scan(); 
+}else if (c == '/') { 
             while (c != '\n' && c != EOF) c = getchar();
             return scan(); 
 
@@ -110,10 +109,4 @@ token scan() {
     }
 }
 
-// int main() {
-//     token t;
-//     while ((t = scan()) != eof) {
-//         printf("Token: %s, Image: [%s]\n", token_names[t], token_image);
-//     }
-//     return 0;
-// }
+
