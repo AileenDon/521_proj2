@@ -24,8 +24,6 @@ void syntax_error(char *msg) {
 void match(token expected) {
     if (current_token == expected) {
         next_token();
-    } else {
-        syntax_error("Unexpected token");
     }
 }
 
