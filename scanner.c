@@ -28,8 +28,8 @@ token scan() {
     while (isspace(c)) {
         if (c == '\n') {
             current_line++;
-        }
-        c = getchar();
+            c = getchar();
+        }     
     }
 
     // Handle end of file
@@ -38,7 +38,7 @@ token scan() {
     // Handle comments or division operator
     if (c == '/') {
         c = getchar();
-        if (c == '*') { // Block comment
+        if (c == '*') { 
             int prev = 0;
             do {
                 prev = c;
