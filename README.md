@@ -1,6 +1,4 @@
-# README
-
-## Project 2: Table-Driven LL(1) Parser for Calculator Language with Comments
+# Project 2: Table-Driven LL(1) Parser for Calculator Language with Comments
 
 ## Team Members:
 
