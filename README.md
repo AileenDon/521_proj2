@@ -1,8 +1,6 @@
 # Project 2: Table-Driven LL(1) Parser for Calculator Language with Comments
 
-## Team Members:
-
-Ananya Kakumanu, Aileen Dong
+## Team Members: Ananya Kakumanu, Aileen Dong
 
 ## Description:
 
