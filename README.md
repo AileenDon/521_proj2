@@ -1,45 +1,42 @@
-### README
+# README
 
-**Project 2: Table-Driven LL(1) Parser for Calculator Language with Comments**
+## Project 2: Table-Driven LL(1) Parser for Calculator Language with Comments
 
-**Team Members:**
------Neeed to be added-----
+## Team Members:
 
----
+Ananya Kakumanu, Aileen Dong
 
-**Description:**
+## Description:
 
 This project implements a table-driven LL(1) parser for the calculator language with comments. The parser is designed to check the lexical and syntactical correctness of calculator programs provided as input files. The calculator language allows variable declarations, arithmetic operations, and output statements.
 
----
-
-**File Structure:**
+## File Structure:
 
 1. `scanner.c`: Implementation of the scanner for the calculator language. It reads input files, identifies tokens, and reports lexical errors.
 2. `parser.c`: Implementation of the LL(1) table-driven parser for the calculator language. It checks for syntactical errors in the input program.
 3. `scanner.h`: Header file containing declarations for scanner functions and token definitions.
 4. `README.md`: Documentation file providing instructions, descriptions, and guidelines for the project.
 
----
-
-**Compilation and Execution:**
+## Compilation and Execution:
 
 To compile the programs, use the following command:
+
 ```
 gcc parser.c scanner.c -o parser
 ```
 
 To run the program, execute the compiled binary along with the input program file:
+
 ```
 ./parser prog1
 ```
+
 Replace `prog1` with the name of the calculator program file to be checked.
 
----
+## Sample Tests:
 
-**Sample Input Programs:**
+### 1. prog1:
 
-1. **prog1:**
 ```c
 /* prog1 */
 read a
@@ -50,7 +47,8 @@ write area
 write perimeter
 ```
 
-2. **prog2:**
+### 2. prog2:
+
 ```c
 /* prog2
 read a
@@ -61,7 +59,8 @@ write area
 write perimeter
 ```
 
-3. **prog3:**
+### 3. prog3:
+
 ```c
 /* prog3 */ */
 read a
@@ -72,7 +71,8 @@ write area
 write perimeter
 ```
 
-4. **prog4:**
+### 4. prog4:
+
 ```c
 // prog4
 read a b
@@ -82,7 +82,8 @@ write area
 write perimeter
 ```
 
-5. **prog5:**
+### 5. prog5:
+
 ```c
 // prog5
 read a
@@ -93,26 +94,23 @@ write area
 write perimeter
 ```
 
----
-**Output Screenshots**
-<img width="327" alt="image" src="https://github.com/AileenDon/521_proj2/assets/158865231/dfe2dff7-978f-407f-946b-22bbe7979ecc">
-<img width="267" alt="image" src="https://github.com/AileenDon/521_proj2/assets/158865231/01e13349-2ada-4568-8e64-c7531221cfa5">
+### Output Screenshots:
 
-**Error Handling:**
+<img width="422" alt="Screenshot 2024-03-08 at 3 37 55 PM" src="https://github.com/AileenDon/521_proj2/assets/120889846/2ec9e848-abb7-4c73-a2ad-c24086a40d62">
 
-- Lexical errors: The scanner reports lexical errors when encountering invalid characters or token sequences.
-- Syntactical errors: The parser identifies and reports syntactical errors such as unexpected tokens or incorrect program structures.
+## Error Handling:
 
----
+Lexical errors: The scanner reports lexical errors when encountering invalid characters or token sequences.
+Syntactical errors: The parser identifies and reports syntactical errors such as unexpected tokens or incorrect program structures.
 
-**Testing:**
+## Issues and Contributions:
 
-We have extensively tested the parser with the provided sample input programs to ensure accurate error detection and reporting.
+The scanner implementation needs to be enhanced to handle comments more effectively.
 
----
+## Contributions:
 
-**Issues and Contributions:**
+Aileen: worked on scanner.c implementing the scanning logic, handling whitespace, comments, identifiers, numbers, and operators with precision. This included correctly identifying and skipping over comments, tokenizing various elements of the calculator language, and handling lexical errors.
 
-- The scanner implementation needs to be enhanced to handle comments more effectively.
-- Contributions:
-  
+Ananya: worked on parser.c developing a parsing mechanism, implementing functions for each non-terminal in the calculator language's grammar. They ensured that the parser correctly handled the structure of statements, expressions, and terms based on the tokens provided by the scanner.
+
+Both engaged in a thorough debugging process, addressing issues such as the "Unexpected token" error by closely examining the integration between the scanner and parser.
