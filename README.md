@@ -1,4 +1,4 @@
-# Project 2: Table-Driven LL(1) Parser for Calculator Language with Comments
+# Table-Driven LL(1) Parser for Calculator Language with Comments
 
 ## Team Members: Ananya Kakumanu, Aileen Dong
 
@@ -102,11 +102,3 @@ Syntactical errors: The parser identifies and reports syntactical errors such as
 ## Issues and Contributions:
 
 The scanner implementation needs to be enhanced to handle comments more effectively.
-
-## Contributions:
-
-Aileen: worked on scanner.c implementing the scanning logic, handling whitespace, comments, identifiers, numbers, and operators with precision. This included correctly identifying and skipping over comments, tokenizing various elements of the calculator language, and handling lexical errors.
-
-Ananya: worked on parser.c developing a parsing mechanism, implementing functions for each non-terminal in the calculator language's grammar. They ensured that the parser correctly handled the structure of statements, expressions, and terms based on the tokens provided by the scanner.
-
-Both engaged in a thorough debugging process, addressing issues such as the "Unexpected token" error by closely examining the integration between the scanner and parser.
